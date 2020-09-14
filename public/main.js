@@ -134,7 +134,21 @@ for (let index = 0; index < numbers.length; index++) {
 
 const average = sumOfNumbers / numbers.length
 
+let sumOfOdd = 0
+let sumOfEven = 0
+for (let index = 0; index < numbers.length; index++) {
+  const element = numbers[index]
+  if (element % 2 === 1) {
+    sumOfOdd += element
+  }
+  if (element % 2 === 0) {
+    sumOfEven += element
+  }
+}
+
 console.log(`smallest equals ${smallest}`)
 console.log(`largest equals ${largest}`)
 console.log(`sum equals ${sumOfNumbers}`)
 console.log(`average equals ${average}`)
+console.log(`The sum of odd numbers is ${sumOfOdd}`)
+console.log(`The sum of even numbers is ${sumOfEven}`)
